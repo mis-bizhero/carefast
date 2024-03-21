@@ -86,7 +86,7 @@
 
 <h2>SDA Provider Group Enquiry Form</h2>
 
-<form action="submit.php" method="post">
+<form action="https://formspree.io/f/your-form-id" method="post">
     <label for="orgName">Name of Organization/Group:</label>
     <input type="text" id="orgName" name="orgName" required><br>
     
@@ -145,26 +145,26 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $orgName = $_POST['orgName'];
-    $contactPerson = $_POST['contactPerson'];
-    $position = $_POST['position'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
-    $enquiryType = $_POST['enquiryType'];
-    $description = $_POST['description'];
-    $services = $_POST['services'];
-    $experience = $_POST['experience'];
-    $collaborationInterests = $_POST['collaborationInterests'];
-    $comments = $_POST['comments'];
+   $orgName = $_POST['orgName'];
+   $contactPerson = $_POST['contactPerson'];
+   $position = $_POST['position'];
+  $email = $_POST['email'];
+   $phone = $_POST['phone'];
+   $address = $_POST['address'];
+   $enquiryType = $_POST['enquiryType'];
+   $description = $_POST['description'];
+   $services = $_POST['services'];
+   $experience = $_POST['experience'];
+   $collaborationInterests = $_POST['collaborationInterests'];
+   $comments = $_POST['comments'];
 
     // Compose email message
-    $to = 'mis@bizhero.com.au';
-    $subject = 'SDA Provider Group Enquiry';
-    $message = "Organization/Group: $orgName\n\nContact Person: $contactPerson\n\nPosition/Title: $position\n\nEmail: $email\n\nPhone: $phone\n\nAddress: $address\n\nType of Enquiry: $enquiryType\n\nDescription of Enquiry: $description\n\nService Offerings: $services\n\nExperience and Expertise: $experience\n\nCollaboration Interests: $collaborationInterests\n\nAdditional Comments or Questions: $comments";
+   $to = 'mis@bizhero.com.au';
+   $subject = 'SDA Provider Group Enquiry';
+   $message = "Organization/Group: $orgName\n\nContact Person: $contactPerson\n\nPosition/Title: $position\n\nEmail: $email\n\nPhone: $phone\n\nAddress: $address\n\nType of Enquiry: $enquiryType\n\nDescription of Enquiry: $description\n\nService Offerings: $services\n\nExperience and Expertise: $experience\n\nCollaboration Interests: $collaborationInterests\n\nAdditional Comments or Questions: $comments";
 
-    // Send email
-    $headers = 'From: ' . $email . "\r\n" .
+   // Send email
+   $headers = 'From: ' . $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n" .
         'X-Mailer: PHP/' . phpversion();
 
